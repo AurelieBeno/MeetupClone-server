@@ -1,0 +1,15 @@
+Database structure
+
+User                  
+*Can subscribe many Group and Meetup
+* Can create many Group + meetup 
+
+
+Group 
+* can have many subscriber 
+* can have many meetup 
+* can be create by 1 user 
+
+Meetup 
+* can have many subscribers
+* can be create by 1 user 
