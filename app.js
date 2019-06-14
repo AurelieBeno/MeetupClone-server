@@ -82,4 +82,7 @@ app.use("/api", authRoutes);
 const groupRouter = require("./routes/group-routes");
 app.use("/api", groupRouter);
 
+const userRouter = require("./routes/user-routes");
+app.use("/api", userRouter);
+
 module.exports = app;

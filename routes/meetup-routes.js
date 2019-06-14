@@ -126,9 +126,17 @@ router.get("/meetup/:meetupId", (req, res, next) => {
           console.log(userInfo);
           console.log("*********MeetupDoc***********");
           let newArr = MeetupDoc.GotoEvent.map(i => {
-            return (i._id = user ? "yes" : "no");
+            console.log(
+              i._id.toString(),
+              " + = ",
+              user.toString()
+            );
+            // return i._id.indexOf(user) > 0 ? "yes" : "no";
+            return i._id.toString() === user.toString()
+              ? "yes"
+              : "no";
           });
-
+          console.log(newArr);
           res.json({
             meetupInf: MeetupDoc,
             userInf: userInfo,
